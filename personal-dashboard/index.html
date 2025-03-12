@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="greeting">Good Day!</h1>
+        <nav>
+          <button onclick="showSection('weather')">Weather</button>
+          <button onclick="showSection('todo')">To-Do List</button>
+          <button onclick="showSection('notes')">Notes</button>
+        </nav>
+      </header>
+
+      <section id="weather" class="section active">
+        <h2>Weather</h2>
+        <input type="text" id="city" placeholder="Enter city" />
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weather-info"></div>
+      </section>
+
+      <section id="todo" class="section">
+        <h2>To-Do List</h2>
+        <input type="text" id="task" placeholder="New task" />
+        <button onclick="addTask()">Add</button>
+        <ul id="task-list"></ul>
+      </section>
+
+      <section id="notes" class="section">
+        <h2>Notes</h2>
+        <textarea
+          id="notes-input"
+          placeholder="Write your notes here..."
+        ></textarea>
+        <button onclick="saveNotes()">Save Notes</button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
